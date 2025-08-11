@@ -1,4 +1,4 @@
-DRUG SMILES,FRAG_SMILES
+drug,fragment
 CC(=O)NCC1CN(c2ccc(-c3ccno3)c(F)c2)C(=O)O1,Cc1ccc(C)c(F)c1
 CSCC(=O)NCC1CN(c2ccc(N3CCOCC3)c(F)c2)C(=O)O1,CNCC1CN(C)C(=O)O1
 O=C(CCc1ccccc1)NCC1CN(c2ccc(N3CCOCC3)c(F)c2)C(=O)O1,CC(=O)CCc1ccccc1

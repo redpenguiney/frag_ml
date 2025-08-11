@@ -1,4 +1,4 @@
-name,SMILES
+name,drug
 mol_1,CC(=O)NCC1CN(c2ccc(-c3ccno3)c(F)c2)C(=O)O1
 mol_2,CSCC(=O)NCC1CN(c2ccc(N3CCOCC3)c(F)c2)C(=O)O1
 mol_3,O=C(CCc1ccccc1)NCC1CN(c2ccc(N3CCOCC3)c(F)c2)C(=O)O1

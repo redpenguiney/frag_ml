@@ -108,7 +108,7 @@ def main(input_csv, mol2_path, docking_dir, target_name, center_coords, box_size
     results = []
 
     for index, row in input_data.iterrows():
-        smiles = row.get('SMILES', None)
+        smiles = row.get('drug', None)
         if smiles is None:
             print(f"No 'SMILES' column found for row {index + 1}. Skipping.")
             continue
@@ -125,7 +125,7 @@ def main(input_csv, mol2_path, docking_dir, target_name, center_coords, box_size
                                                    center_coords, box_sizes)
 
         if best_fragment is not None:
-            results.append({'Name': row['name'], 'SMILES': smiles, 'BestFragment': best_fragment, 'BestScore': best_score})
+            results.append({'Name': row['name'], 'drug': smiles, 'fragment': best_fragment, 'BestScore': best_score})
 
     if not results:
         print("No successful docking results.")

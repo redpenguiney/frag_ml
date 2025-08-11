@@ -49,7 +49,7 @@ def export_full_package(run_dir: Path, model: RobertaForMaskedLM, tokenizer: Rob
 
 
 class SMILESDataset(Dataset):
-    def __init__(self, df: pd.DataFrame, tokenizer: RobertaTokenizer, *, smiles_col="DRUG SMILES_DEEP", label_col="FRAG_SMILES_DEEP",max_length=128):
+    def __init__(self, df: pd.DataFrame, tokenizer: RobertaTokenizer, *, smiles_col="DRUG_SMILES_DEEP", label_col="FRAG_SMILES_DEEP",max_length=128):
         df = df.dropna(subset=[smiles_col, label_col])
         df = df[(df[smiles_col].str.len() > 0) & (df[label_col].str.len() > 0)]
         self.df = df.reset_index(drop=True)

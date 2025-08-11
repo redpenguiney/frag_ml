@@ -30,8 +30,8 @@ class SMILESDataset(Dataset):
         return len(self.df)
 
     def __getitem__(self, idx):
-        drug_smiles = self.df.iloc[idx]['DRUG SMILES']
-        fragment_smiles = self.df.iloc[idx]['FRAG_SMILES']
+        drug_smiles = self.df.iloc[idx]['drug']
+        fragment_smiles = self.df.iloc[idx]['fragment']
 
         inputs = self.tokenizer(drug_smiles, max_length=self.max_length, padding='max_length', truncation=True, return_tensors="pt")
         inputs = {key: val.squeeze(0) for key, val in inputs.items()}
